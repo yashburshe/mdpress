@@ -1,4 +1,4 @@
-# Blogurr
+# 🐾 Blogurr
 ## What is Blogurr?
 /blaw · gur/
 
