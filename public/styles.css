@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Variable.ttf");
+  font-style: normal;
+  font-weight: 300 800;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Italic.ttf");
+  font-style: italic;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+input,
+label {
+  display: block;
+}
+
+nav{
+    background-color: rgb(230, 211, 166);
+    padding: 1rem;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav > ul > li:first-of-type{
+    font-size: 2rem;
+}
+
+nav > ul > li:first-of-type:hover > a{
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.li-post {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    max-width: 70ch;
+    margin: 0 auto;
+    padding: 0;
+    background-color: rgb(246, 246, 246);
+    color: rgb(21, 21, 21);
+}
+
+main{
+    padding: 1rem 2rem;
+}
+
+a:hover{
+  text-decoration:underline;
+}

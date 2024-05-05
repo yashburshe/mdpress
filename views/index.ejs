@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/header') %>
+  <body>
+    <div class="wrapper">
+      <%- include('partials/navbar') %>
+      <main>
+        <hgroup>
+          <h1>🐾 Blogurr</h1>
+          <p>/blaw · gur/</p>
+          <p>A lightweight, server side rendering blog</p>
+        </hgroup>
+        <section>
+          <h2>What is Blogurr?</h2>
+          <p>
+            Blogurr is a server side rendering blog powered by Node.js. It offers
+            extreme customization and flexibility in terms of making sure your
+            blog remains and looks like your blog. Get into the nitty gritty and
+            modify the JavaScript to truly make it yours.
+          </p>
+        </section>
+        <section>
+          <h2>FAQ</h2>
+          <h3>How do I start blogging?</h3>
+          <p>You can click on the links in the navigation bar to get started</p>
+          <h3>How can I add this blog to my current website?</h3>
+          <p>
+            This is a server side rendered blog. Which means that you will have
+            to either reverse-proxy the port on which the index.js runs to your
+            desired path or subdomain or if you're brave enough, generate static
+            files using the EJS.
+            <br>
+            <b
+              >You will have to add authentication yourself as this framework
+              does not provided that. It is recommended to protect the routes
+              /manage-posts & /create-new-posts</b
+            >
+          </p>
+          <h3>How can I make the blog <q>really mine</q>?</h3>
+          <p>
+            All the blog utilities used to generate content are stored in
+            utils/blogutils.js. There you can find a bunch of well commented
+            functions which you can edit.
+          </p>
+          <h3>How can I style the blog?</h3>
+          <p>
+            All CSS is to be written inside styles.css to take effect. To start
+            with a fresh slate, CTRL+A and DELETE the contents of styles.css. To
+            add additional CSS files make sure to link them in the header.ejs
+            partial in views/partials/header.ejs
+          </p>
+        </section>
+        <section>
+          <h2>Upcoming Features</h2>
+          <ol>
+            <li>Update a post (That will complete the CRUD quadrangle)</li>
+            <li>Author categorization system</li>
+            <li>A sort of settings panel to abstract editing JS files</li>
+            <li>Support to store and use local images</li>
+          </ol>
+        </section>
+        <section>
+          <h2>What this Project will NOT be</h2>
+          <ul>
+            <li>
+              A static blog generator. I want this to be a server side rendered
+              blog.
+            </li>
+            <li>
+              An alternative to Wordpress, Hugo or the likes. It is a fun
+              project to tinker with for you and me but not meant to be
+              production level (yet)
+            </li>
+            <li>
+              An example in good coding practices. I'm learning and this is an
+              outlet.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
