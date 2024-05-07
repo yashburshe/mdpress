@@ -17,12 +17,12 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("index", { title: "Home",});
+  res.render("index", { title: "Home" });
 });
 
 app.get("/manage-posts", (req, res) => {
   const posts = blogutils.getPosts();
-  res.render("manage-posts", { title: 'Manage Posts', posts: posts });
+  res.render("manage-posts", { title: "Manage Posts", posts: posts });
 });
 
 app.get("/posts", (req, res) => {
@@ -31,11 +31,11 @@ app.get("/posts", (req, res) => {
 });
 
 app.get("/create-post", (req, res) => {
-  res.render("create-post", {title: "Create a Post",});
+  res.render("create-post", { title: "Create a Post" });
 });
 
 app.get("/posts/:slug", (req, res) => {
-  res.render("posts/" + req.params.slug, {title: "Post"});
+  res.render("posts/" + req.params.slug, { title: "Post" });
 });
 
 app.post("/save-post", (req, res) => {
@@ -44,13 +44,14 @@ app.post("/save-post", (req, res) => {
   blogutils.addToJson(formData);
   blogutils.makeEjsFile(html, formData.slug);
   const posts = blogutils.getPosts();
-  res.render("manage-posts", { title: "Manage Posts", posts: posts });
+  res.redirect("/manage-posts");
 });
 
 app.post("/delete-post", (req, res) => {
   const formData = req.body;
   blogutils.deletePost(formData.slug);
-  res.render("manage-posts", { title: "Manage Posts"});
+  const posts = blogutils.getPosts();
+  res.redirect("/manage-posts");
 });
 
 app.listen(port, () => {

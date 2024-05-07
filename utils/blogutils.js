@@ -43,27 +43,46 @@ function toHtmlPage(formData) {
   const parsed = marked.parse(formData.content);
   const dateStrings = toDateStrings(new Date(formData.date));
   const html = `
-    <html>
-      <%- include('../partials/header') %>
-      <body>
-      <div class="wrapper">
-        <%- include('../partials/navbar') %>
-        <a href='/posts'><< Go Back</a>
-        <main>
+  <html>
+  <%- include('../partials/header') %>
+  <body>
+    <div class="wrapper">
+      <%- include('../partials/navbar') %>
+      <main>
+        <div>
+          <a href="/posts" class="go-back"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-arrow-left"
+            >
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              Go Back
+              </a>
+        </div>
           <hgroup>
           <h1 class="headline">${formData.title}</h1>
           <div class="byline">
             <address class="author">By <a>${formData.author}</a></address> 
             on <time pubdate date="${formData.date}" title="${
-            dateStrings.monthDayYear
-            }">${dateStrings.slashedDate}</time>
+    dateStrings.monthDayYear
+  }">${dateStrings.slashedDate}</time>
           </div>
           </hgroup>
           ${parsed.trim()}
         </main>
-        <div>
-      </body>
-    </html>
+        </div>
+        </body>
+      </html>
   `;
   return html;
 }
