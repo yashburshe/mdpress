@@ -1,11 +1,17 @@
-# ejs-blog
+# About
+Mdpress is an experimental blog framework powered by EJS and Markdown
 
-ejs-blog is a lightweight, server side rendering blogging engine powered by Node.js and EJS.
-⚠️ In heavy development
+[![npm](https://badgen.net/static/marked/12.02)](https://github.com/markedjs/marked)
 
-## Get started
+# Features
+1. Create new posts with a slug, title, author, date and content
+    - Post content is written in Markdown. All features supported by 
+3. Manage posts (delete)
+4. View all posts
 
-1. `git clone`
-2. Create a `.env` file in root and add the `PORT` variable with a value of your choice (I defaulted to `3300`)
-3. `npm install`
-4. `npm run dev`
+# Installation
+
+1. Clone this repository
+2. Create a `.env` file in root and add the `PORT` variable (eg. 3000)
+3. Run `npm install`
+4. Run `npm run dev`
