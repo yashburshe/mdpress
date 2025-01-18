@@ -73,7 +73,7 @@ function toHtmlPage(formData) {
           <h1 class="headline">${formData.title}</h1>
           <div class="byline">
             <address class="author">By <a>${formData.author}</a></address> 
-            on <time pubdate date="${formData.date}" title="${
+            ${" "}on <time pubdate date=" ${formData.date}" title="${
     dateStrings.monthDayYear
   }">${dateStrings.slashedDate}</time>
           </div>
